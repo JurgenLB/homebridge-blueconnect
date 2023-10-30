@@ -1,7 +1,7 @@
 
 <p align="center">
 
-<img src="https://0g.citymesh.com/files/Blog/Riiot-Labs/_1400xAUTO_fit_center-center_100/blueriiot-logo.png" width="150">
+<img src="https://www.blueriiot.com/static/img/app-icons/favicon-32x32.png" width="150">
 
 </p>
 
@@ -29,7 +29,8 @@ The configuration parameters need to be added to `accessories` section of the Ho
                     "email": "XXX@XXX.XXX",
                     "password": "XXX",
                     "swimmingpoolid": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-                    "bluedeviceserial": "00000000"
+                    "bluedeviceserial": "00000000",
+                    "model": "BlueConnect"
                 }
             ]
     ...
