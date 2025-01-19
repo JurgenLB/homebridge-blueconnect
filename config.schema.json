@@ -1,0 +1,37 @@
+{
+  "pluginAlias": "BlueRiiot",
+  "pluginType": "platform",
+  "singular": true,
+  "schema": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "title": "Name",
+        "type": "string",
+        "required": true,
+        "default": "BlueRiiot"
+      },
+        "email": {
+            "title": "Email",
+            "type": "string",
+            "required": true
+        },
+        "password": {
+            "title": "Password",
+            "type": "string",
+            "required": true
+        },
+        "weather": {
+          "title": "Expose Current Weather Temperature as a Sensor",
+          "type": "boolean",
+          "required": false
+        },
+      "refreshInterval": {
+        "title": "Refresh Interval (Minutes)",
+        "type": "number",
+        "required": true,
+        "default": 30
+      }
+    }
+  }
+}

@@ -1,37 +1,34 @@
 
 <p align="center">
-
-<img src="https://www.blueriiot.com/static/img/app-icons/favicon-32x32.png" width="150">
-
+ <a href="https://github.com/taurgis/homebridge-blueconnect-v2"><img alt="Homebridge iRobot" src="https://github.com/user-attachments/assets/7612a519-e5ad-487c-a815-c22158ee7550" width="600px"></a>
 </p>
 
+# homebridge-blueconnect-v2
 
-# Homebridge Plugin - Blue Connect
+This is a plugin for BlueRiiot devices. It reads the swimming pool temperature using the BlueConnect account to retrieve it, which the device sends to the BlueRiiot cloud.
 
-Homebridge plugin for BlueRiiot devices.
-It reads the Swimming pool temperature, using the BlueConnect account to retreive Temperature, sent to the Blueriiot cloud by the Device.
+## Weather
+
+Since the service also provides weather information for the pool's location, an optional accessory can display the current temperature for weather-based automation.
 
 ## Installation
 
-npm install VanAxl/homebridge-blueconnect
+npm install taurgis/homebridge-blueconnect-v2
 
 ## Configurations
 
-The configuration parameters need to be added to `accessories` section of the Homebridge configuration file.
+The configuration parameters need to be added to `platforms` section of the Homebridge configuration file.
 
 ```json5
 {
     ...
-            "accessories": [
-                {
-                    "accessory": "BlueRiiot",
-                    "name": "XXX",
-                    "email": "XXX@XXX.XXX",
-                    "password": "XXX",
-                    "swimmingpoolid": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-                    "bluedeviceserial": "00000000",
-                    "model": "BlueConnect"
-                }
+            "platforms": [
+                 {
+                     "name": "BlueRiiot",
+                     "email": "xxxxxx",
+                     "password": "xxxxxx",
+                     "platform": "BlueRiiot"
+                 }
             ]
     ...
 }
@@ -40,10 +37,6 @@ The configuration parameters need to be added to `accessories` section of the Ho
 
 #### Parameters
 
-* `accessory ` is required, with `BlueRiiot` value.  
+* `platform` is required, with `BlueRiiot` value.  
 * `name` (required) is anything you'd like to use to identify this device. You can always change the name from within the Home app.
-* `email` and `password` (required) are the credentials you use in the BlueConnect app.
-
-To Get the value in config section for : the `swimmingpoolid` and the `bluedeviceserial` .
-=> for the moment, if these parameters are not written in the config file, these IDs will be displayed in the homebridge log console during homebridge startup, so you can copy/paste it in the config section.
-
+* `email` and `password` (required) are your credentials in the BlueConnect app.
